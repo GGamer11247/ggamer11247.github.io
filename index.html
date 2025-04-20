@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Miner Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Pet Miner</h1>
+            <div class="stats">
+                <div class="coins">Coins: <span id="coins">0</span></div>
+                <div class="cps">Coins/s: <span id="cps">0</span></div>
+            </div>
+        </div>
+        
+        <div class="pet-container">
+            <div class="pet" id="pet">
+                <svg width="100" height="100" viewBox="0 0 100 100" id="pet-svg">
+                    <circle cx="50" cy="50" r="40" id="pet-body" fill="#FFD700" />
+                    <circle cx="35" cy="40" r="5" id="pet-eye-left" fill="black" />
+                    <circle cx="65" cy="40" r="5" id="pet-eye-right" fill="black" />
+                    <path d="M35,65 Q50,75 65,65" id="pet-mouth" stroke="black" stroke-width="3" fill="none" />
+                </svg>
+                <div class="pet-info">
+                    <h3 id="pet-name">Golden Miner</h3>
+                    <p class="rarity" id="pet-rarity">Common</p>
+                    <p class="mining-rate" id="mining-rate">1 coin/s</p>
+                </div>
+            </div>
+            <button id="mine-btn">Mine Coins</button>
+        </div>
+        
+        <div class="upgrades">
+            <div class="upgrade-section">
+                <h2>Upgrade Pet</h2>
+                <button id="upgrade-rarity">Upgrade Rarity (<span id="upgrade-cost">10</span> coins)</button>
+            </div>
+            <div class="new-pet-section">
+                <h2>Buy New Pet</h2>
+                <button id="buy-new-pet">Buy New Pet (<span id="new-pet-cost">100</span> coins)</button>
+                <p>Current pets: <span id="pet-count">1</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
